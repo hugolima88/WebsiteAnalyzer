@@ -9,7 +9,7 @@ namespace ImageFetcher.Services
         private readonly IWordsHandler m_WordsHandler;
 
         /// <summary>
-        /// Creates an instance of <see cref="ReportGeneratorService"/>
+        /// Creates an instance of <see cref="ReportGeneratorService"/>.
         /// </summary>
         public ReportGeneratorService() :
             this(new ImagesFetcherService(),
@@ -27,7 +27,7 @@ namespace ImageFetcher.Services
         /// Generates a full report for the provided website.
         /// </summary>
         /// <param name="p_WebsiteUrl">The provided website URL.</param>
-        /// <returns>An instance of <see cref="FullReportModel"/> </returns>
+        /// <returns>An instance of <see cref="FullReportModel"/>.</returns>
         public FullReportModel GenerateReport(string p_WebsiteUrl)
         {
             var report = new FullReportModel

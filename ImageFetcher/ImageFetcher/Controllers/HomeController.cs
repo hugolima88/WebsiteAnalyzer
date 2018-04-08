@@ -59,8 +59,7 @@ namespace ImageFetcher.Controllers
             else
             {
                 return RedirectToAction("Index");
-            }
-            
+            }            
         }
 
         private string SanitizeUrl(string p_Url)

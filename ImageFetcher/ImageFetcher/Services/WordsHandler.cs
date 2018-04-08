@@ -14,7 +14,7 @@ namespace ImageFetcher.Services
         private readonly IMsHtmlBrowser m_MsHtmlBrowser;
 
         /// <summary>
-        /// Creates an instance of <see cref="WordsHandler"/>
+        /// Creates an instance of <see cref="WordsHandler"/>.
         /// </summary>
         public WordsHandler() :
             this(new MsHtmlBrowserWrapper())
@@ -29,7 +29,7 @@ namespace ImageFetcher.Services
         /// Gets the summary about the words for the provided website.
         /// </summary>
         /// <param name="p_WebsiteUrl">The provided website URL.</param>
-        /// <returns></returns>
+        /// <returns>An instance of <see cref="WordsSummaryModel"/>.</returns>
         public WordsSummaryModel GetWordsSummary(string p_WebsiteUrl)
         {
             var wordsSummary = new WordsSummaryModel();

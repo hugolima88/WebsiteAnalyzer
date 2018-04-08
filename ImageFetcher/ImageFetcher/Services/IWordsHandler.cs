@@ -11,7 +11,7 @@ namespace ImageFetcher.Services
         /// Gets the summary about the words for the provided website.
         /// </summary>
         /// <param name="p_WebsiteUrl">The provided website URL.</param>
-        /// <returns></returns>
+        /// <returns>An instance of <see cref="WordsSummaryModel"/>.</returns>
         WordsSummaryModel GetWordsSummary(string p_WebsiteUrl);
     }
 }

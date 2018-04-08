@@ -11,14 +11,13 @@
         public string WebsiteUrl { get; set; }
 
         /// <summary>
-        /// /Represents an instance of <see cref="ImagesCarouselModel"/>
+        /// /Represents an instance of <see cref="ImagesCarouselModel"/>.
         /// </summary>
         public ImagesCarouselModel ImagesCarousel { get; set; }
 
         /// <summary>
-        /// Represents an instance of <see cref="WordsSummaryModel"/>
+        /// Represents an instance of <see cref="WordsSummaryModel"/>.
         /// </summary>
         public WordsSummaryModel WordsSummary { get; set; }
-
     }
 }

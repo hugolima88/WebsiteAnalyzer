@@ -3,7 +3,6 @@ using ImageFetcher.Models;
 using System.Linq;
 using System;
 using ImageFetcher.Services.Wrappers;
-using HtmlAgilityPack;
 
 namespace ImageFetcher.Services
 {
@@ -15,7 +14,7 @@ namespace ImageFetcher.Services
         private readonly IHtmlWeb m_HtmlWeb;
 
         /// <summary>
-        /// Creates an instance of <see cref="ImagesFetcherService"/>
+        /// Creates an instance of <see cref="ImagesFetcherService"/>.
         /// </summary>
         public ImagesFetcherService() :
             this(new HtmlWebWrapper())

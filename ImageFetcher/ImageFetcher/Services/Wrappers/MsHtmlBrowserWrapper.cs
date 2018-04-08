@@ -26,7 +26,6 @@ namespace ImageFetcher.Services.Wrappers
             }
         }
 
-
         public void GoTo(string p_Url)
         {
             m_MsHtmlBrowser.GoTo(p_Url);

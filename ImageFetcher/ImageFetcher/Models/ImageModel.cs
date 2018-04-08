@@ -6,7 +6,7 @@
     public class ImageModel
     {
         /// <summary>
-        /// Creates an instance of <see cref="ImageModel"/>
+        /// Creates an instance of <see cref="ImageModel"/>.
         /// </summary>
         public ImageModel(string p_ImageUrl)
         {
