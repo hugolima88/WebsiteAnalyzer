@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFetcher", "ImageFetcher\ImageFetcher.csproj", "{51A20A11-8A41-4271-AA51-C3B2D31EAA36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFetcherTests", "ImageFetcherTests\ImageFetcherTests.csproj", "{6AD3D852-32F0-4853-947C-5D0D3E6EB5DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A20A11-8A41-4271-AA51-C3B2D31EAA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A20A11-8A41-4271-AA51-C3B2D31EAA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A20A11-8A41-4271-AA51-C3B2D31EAA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A20A11-8A41-4271-AA51-C3B2D31EAA36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD3D852-32F0-4853-947C-5D0D3E6EB5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD3D852-32F0-4853-947C-5D0D3E6EB5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD3D852-32F0-4853-947C-5D0D3E6EB5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD3D852-32F0-4853-947C-5D0D3E6EB5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

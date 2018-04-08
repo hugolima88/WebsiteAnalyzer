@@ -1,0 +1,19 @@
+﻿@model WordsSummaryModel
+
+<div class="container">
+    @{
+        var mostFrequentWords = Model.GetMostFrequentWords(7);
+        if (mostFrequentWords != null)
+        {
+            <h5>Total words: <strong>@Model.WordsCount</strong></h5>
+            <h5>Total different words: <strong>@Model.DifferentWordsCount</strong></h5>
+            <br />
+            int index = 1;
+            foreach(var pair in mostFrequentWords)
+            {
+                <h5>@index) The word <strong>@pair.Key</strong> appeared <strong>@pair.Value</strong> times.</h5>
+                index++;
+            }
+        }
+    }
+</div>

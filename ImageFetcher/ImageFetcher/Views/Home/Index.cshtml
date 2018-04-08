@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("FullReport", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <h3>Please enter a website URL:</h3>
+            <input type="text" name="websiteUrl" value="http://www.xcentium.com/"/>
+            <input type="submit" value="Create Website Report" />
+        }
+    </div>
+</div>

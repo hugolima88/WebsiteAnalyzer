@@ -1,0 +1,16 @@
+﻿@model FullReportModel
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Informations about the website <ins>@Model.WebsiteUrl</ins></h3>
+        <br />
+
+        <h4><ins><b>Fetched Images:</b></ins></h4>
+        @Html.Partial("_ImagesCarousel", Model.ImagesCarousel)
+        <br />
+
+        <h4><ins><b>Words Summary:</b></ins></h4>
+        @Html.Partial("_WordsSummary", Model.WordsSummary)
+        <br />
+    </div>
+</div>
