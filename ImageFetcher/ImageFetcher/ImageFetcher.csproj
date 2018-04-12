@@ -203,9 +203,8 @@
     <Compile Include="Services\IWordsHandler.cs" />
     <Compile Include="Services\ReportGeneratorService.cs" />
     <Compile Include="Services\WordsHandler.cs" />
+    <Compile Include="Services\Wrappers\IHtmlAgilityPackWrapper.cs" />
     <Compile Include="Services\Wrappers\IHtmlWeb.cs" />
-    <Compile Include="Services\Wrappers\IMsHtmlBrowser.cs" />
-    <Compile Include="Services\Wrappers\MsHtmlBrowserWrapper.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +228,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Compile Include="Services\Wrappers\HtmlAgilityPackWrapper.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

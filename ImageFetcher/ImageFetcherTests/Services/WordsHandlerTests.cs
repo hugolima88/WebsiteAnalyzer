@@ -12,35 +12,23 @@ namespace ImageFetcherTests.Services
         private const string WEBSITE = "www.mywebsite.com";
         private const string WEBSITE_VALID_TEXT = "a a a a a a b b b b b c c c c e e e e r t g d d d b f f f f";
 
-        private Mock<IMsHtmlBrowser> m_MsHtmlBrowserMock;
+        private Mock<IHtmlAgilityPackWrapper> m_HtmlAgilityPackWrapperMock;
 
         private WordsHandler m_WordsHandler;
 
         [SetUp]
         public void Setup()
         {
-            m_MsHtmlBrowserMock = new Mock<IMsHtmlBrowser>();
+            m_HtmlAgilityPackWrapperMock = new Mock<IHtmlAgilityPackWrapper>();
 
-            m_WordsHandler = new WordsHandler(m_MsHtmlBrowserMock.Object);
-        }
-
-        [Test]
-        public void GetWordsSummary_GivenWebsiteTextIsNull_ExpectEmptySummary()
-        {
-            m_MsHtmlBrowserMock.Setup(browser => browser.Text)
-                               .Returns(() => null);
-
-            var wordSummary = m_WordsHandler.GetWordsSummary(WEBSITE);
-
-            Assert.That(wordSummary.WordsCount, Is.EqualTo(0));
-            Assert.That(wordSummary.OccurringWordsDictionary, Is.Null);
+            m_WordsHandler = new WordsHandler(m_HtmlAgilityPackWrapperMock.Object);
         }
 
         [Test]
         public void GetWordsSummary_GivenWebsiteTextIsEmpty_ExpectEmptySummary()
         {
-            m_MsHtmlBrowserMock.Setup(browser => browser.Text)
-                               .Returns(String.Empty);
+            m_HtmlAgilityPackWrapperMock.Setup(wrapper => wrapper.GetVisibleText(WEBSITE))
+                                        .Returns(String.Empty);
 
             var wordSummary = m_WordsHandler.GetWordsSummary(WEBSITE);
 
@@ -51,8 +39,8 @@ namespace ImageFetcherTests.Services
         [Test]
         public void GetWordsSummary_GivenWebsiteTextIsValid_ExpectValidSummary()
         {
-            m_MsHtmlBrowserMock.Setup(browser => browser.Text)
-                               .Returns(WEBSITE_VALID_TEXT);
+            m_HtmlAgilityPackWrapperMock.Setup(wrapper => wrapper.GetVisibleText(WEBSITE))
+                                        .Returns(WEBSITE_VALID_TEXT);
 
             var wordSummary = m_WordsHandler.GetWordsSummary(WEBSITE);
             var threeMostFrequentWords = wordSummary.GetMostFrequentWords(3);

@@ -11,18 +11,18 @@ namespace ImageFetcher.Services
     /// Implements the methods to get a summary about the words for the provided website.
     public class WordsHandler : IWordsHandler
     {
-        private readonly IMsHtmlBrowser m_MsHtmlBrowser;
+        private readonly IHtmlAgilityPackWrapper m_HtmlAgilityPackWrapper;
 
         /// <summary>
         /// Creates an instance of <see cref="WordsHandler"/>.
         /// </summary>
         public WordsHandler() :
-            this(new MsHtmlBrowserWrapper())
+            this(new HtmlAgilityPackWrapper())
         { }
 
-        internal WordsHandler(IMsHtmlBrowser p_MsHtmlBrowser)
+        internal WordsHandler(IHtmlAgilityPackWrapper p_HtmlAgilityPackWrapper)
         {
-            m_MsHtmlBrowser = p_MsHtmlBrowser;
+            m_HtmlAgilityPackWrapper = p_HtmlAgilityPackWrapper;
         }
 
         /// <summary>
@@ -68,14 +68,7 @@ namespace ImageFetcher.Services
 
         private string GetVisibleText(string p_WebsiteUrl)
         {
-            // Here I'm using an external open source lib to get all the words on the provided website.
-            // More information here: https://www.codeproject.com/Articles/587458/GettingplusOnlyplusTheplusTextplusDisplayedplusOnp
-            m_MsHtmlBrowser.GoTo(p_WebsiteUrl);
-            var text = m_MsHtmlBrowser.Text;
-            if (!String.IsNullOrEmpty(text))
-                return text.Replace("\r\n", " ");
-            else
-                return String.Empty;
+            return m_HtmlAgilityPackWrapper.GetVisibleText(p_WebsiteUrl);
         }
     }
 }
